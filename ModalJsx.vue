@@ -10,16 +10,11 @@ export default {
             default: false,
         },
 
-        message: {
-            type: String,
-            required: true
-        },
-
     },
 
     render() {
         return (this.show) ? <div class="modal">
-            <p>{this.message}</p>
+            <p>{this.$slots.default}</p>
             <button onClick={this.clickCancelHandler}>Cancelar</button>
             <button onClick={this.clickOkHandler}>Ok</button>
         </div> : null
