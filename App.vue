@@ -1,14 +1,16 @@
 <template>
     <div id="app">
         <button @click.prevent="toggleHandler">Toggle Modal</button>
-        <!-- <modal-create-element :show="show" message="Hello World"></modal-create-element> -->
-        <modal-jsx :show="show" message="Hello World"></modal-jsx>
+        <modal-create-element :show="show">
+            <p>Hello World</p>
+        </modal-create-element>
+        <!-- <modal-jsx :show="show" message="Hello World"></modal-jsx> -->
     </div>
 </template>
 
 <script>
-/* import ModalCreateElement from "./ModalCreateElement"; */
-import ModalJsx from "./ModalJsx";
+import ModalCreateElement from "./ModalCreateElement";
+/* import ModalJsx from "./ModalJsx"; */
 export default {
 
     name: "App",
@@ -22,8 +24,8 @@ export default {
     },
 
     components: {
-        /* ModalCreateElement,  */
-        ModalJsx,
+        ModalCreateElement, 
+        /* ModalJsx, */
     },
 
     methods: {
